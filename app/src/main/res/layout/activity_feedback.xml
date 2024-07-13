@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="56dp"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:src="@drawable/back_iso" />
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_toEndOf="@+id/back"
+        android:gravity="center_vertical"
+        android:text="Feedback"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/back"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/et_bg"
+        android:fontFamily="@font/sfnsdisplay"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/feedback_et"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/email"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="0sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/et_bg"
+        android:fontFamily="@font/sfnsdisplay"
+        android:gravity="start"
+        android:hint="Write your feedback or message"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/feedback_et"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/sfnsbold"
+        android:gravity="center"
+        android:text="Submit"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

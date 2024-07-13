@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NotificationListActivity">
+
+    <ImageView
+        android:id="@+id/backNotification"
+        android:layout_width="30dp"
+        android:layout_height="56dp"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:src="@drawable/back_iso" />
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:id="@+id/block"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_toEndOf="@+id/backNotification"
+        android:gravity="center_vertical"
+        android:text="Block Notification List"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        style="@style/headerTextStyle"
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_toEndOf="@+id/backNotification"
+        android:gravity="center_vertical"
+        android:text="Saved Notifications"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/backNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/alert_layout"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/alert_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_alert"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="After 5 days notification will\nbe automatically deleted"
+                    android:gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#E15562"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sfnsdisplay"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/shimmer_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="1"
+                app:shimmer_demo_layout="@layout/demo_item_1"
+                app:shimmer_demo_layout_manager_type="linear_vertical"
+                app:shimmer_demo_angle="20"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notificationRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearAll"
+        style="@style/buttonStyle"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_bg"
+        android:elevation="@dimen/_4sdp"
+        android:text="Clear all"
+        android:visibility="gone"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_11sdp" />
+
+</RelativeLayout>

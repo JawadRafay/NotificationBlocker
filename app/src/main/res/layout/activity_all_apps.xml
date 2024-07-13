@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AllApps">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backApps"
+            android:layout_width="30dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/back_iso" />
+
+        <TextView
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/backApps"
+            android:gravity="center_vertical"
+            android:text="Apps"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/shimmer_recycler_all_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_grid_child_count="1"
+        app:shimmer_demo_layout="@layout/demo_item"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_angle="20"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:scrollbars="none">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Selected Apps"
+               android:fontFamily="@font/sfnsbold"
+               android:textSize="@dimen/_13sdp"
+               android:textColor="@color/text_color"
+               android:layout_marginTop="10dp"
+               android:layout_marginStart="10dp"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_selected_apps"
+               android:layout_marginTop="10dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:nestedScrollingEnabled="false"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Apps"
+               android:fontFamily="@font/sfnsbold"
+               android:textSize="@dimen/_13sdp"
+               android:textColor="@color/text_color"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_all_apps"
+               android:layout_marginTop="10dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:nestedScrollingEnabled="false"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

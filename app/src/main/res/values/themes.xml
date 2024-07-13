@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NotificationBlocker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#3675f6</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_700</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="Theme.NotificationBlocker" parent="Base.Theme.NotificationBlocker" />
+
+
+    <style name="headerTextStyle">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:fontFamily">@font/sfnsbold</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:fontFamily">@font/sfnsdisplay</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/sfnsbold</item>
+    </style>
+
+    <style name="imageStyle">
+        <item name="android:tint">@color/text_color</item>
+    </style>
+
+    <style name="Theme.NotificationBlocker.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">#FFCC66</item>
+        <item name="android:width">18dp</item>
+        <item name="android:height">15dp</item>
+    </style>
+
+
+</resources>

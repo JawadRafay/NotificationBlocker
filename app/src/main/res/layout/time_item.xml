@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zerobranch.layout.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:draggedItem="@id/drag_item"
+    app:rightItem="@id/right_view"
+    android:background="@color/white"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="10dp"
+    app:swipeDirection="left">
+
+    <LinearLayout
+        android:id="@+id/right_view"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:background="@drawable/delete_bg"
+            android:gravity="center"
+            android:paddingEnd="14dp"
+            android:paddingStart="14dp"
+            android:tint="#ce5254"
+            android:src="@drawable/delete"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/drag_item"
+        android:visibility="visible"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_bg"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/blocker"
+            android:layout_width="12dp"
+            android:layout_height="match_parent"
+            android:padding="12dp" />
+
+        <LinearLayout
+            android:layout_toEndOf="@+id/blocker"
+            android:gravity="center_vertical"
+            android:layout_toStartOf="@+id/is_on"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                style="@style/headerTextStyle"
+                android:textAllCaps="true"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="M T S"
+                android:letterSpacing=".2"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginTop="2dp"
+                android:textAllCaps="true"
+                style="@style/textStyle"
+                android:textColor="@color/blue2"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+        <com.bitvale.switcher.SwitcherX
+            android:id="@+id/is_on"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="15dp"
+            app:elevation="0dp"
+            app:switcher_icon_color="@color/white"
+            app:switcher_off_color="#d6d6d6"
+            app:switcher_on_color="#4183f8" />
+
+    </RelativeLayout>
+
+</com.zerobranch.layout.SwipeLayout>

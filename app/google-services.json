@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1043228836234",
+    "project_id": "notification-blocker-c7db6",
+    "storage_bucket": "notification-blocker-c7db6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043228836234:android:d22f36720c7860f428c873",
+        "android_client_info": {
+          "package_name": "noti.notificationblocker.blocknotification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfvgNwfYQZpXzr1oKxFz7AojysqCK9Na8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

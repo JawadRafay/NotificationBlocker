@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/app_bg"
+    android:layout_height="60dp">
+
+
+    <ImageView
+        android:id="@+id/child_image_locker"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:padding="6dp" />
+
+    <TextView
+        android:id="@+id/child_app_locker_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/switcher"
+        android:layout_toEndOf="@+id/child_image_locker"
+        android:fontFamily="@font/sfnsdisplay"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <com.bitvale.switcher.SwitcherX
+        android:id="@+id/switcher"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="15dp"
+        app:elevation="0dp"
+        android:checked="true"
+        app:switcher_icon_color="@color/white"
+        app:switcher_off_color="#d6d6d6"
+        app:switcher_on_color="#4183f8" />
+
+</RelativeLayout>

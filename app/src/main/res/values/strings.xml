@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Notification Blocker</string>
+    <string name="ad_attribution">AD</string>
+    <string name="APP_ID">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="BANNER">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="INTERSTITIAL">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="NATIVE">ca-app-pub-3940256099942544/2247696110</string>
+
+    <string name="dev_id">UpTree Developers</string>
+    <string name="STRING_TOO_LARGE">619a75d4-dedb-4f26-a6a0-21086c0a7a4c</string>
+    <string name="LICENSE_KEY"></string>
+
+</resources>
